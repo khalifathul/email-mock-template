@@ -24,7 +24,6 @@ class Popup extends Component {
     this.state = {
       mail: "",
       id: props.mails.length + 1,
-      popup: true,
       userPopup: false,
       userTo: "",
       users: [
@@ -40,7 +39,7 @@ class Popup extends Component {
   }
 
   popupClose() {
-    this.setState({ popup: false });
+    this.props.popupClose();
   }
 
   handleChange(event) {
@@ -73,11 +72,11 @@ class Popup extends Component {
     })
   }
   render() {
-    const { mail, popup, userPopup, userTo } = this.state;
+    const { mail, userPopup, userTo } = this.state;
     const { mailId } = this.props;
     const noActiveUser = this.state.users.filter(el => el.name !== this.props.user);
     const chatFilter = this.props.mails.filter(el => el.userTo === userTo);
-    const clikedMail = this.props.mails.filter(el => el.id === this.props.mailId);
+    const clikedMail = this.props.mails.filter(el => el.id === mailId);
     let chats,
         userFrom;
     if(mailId === undefined){
@@ -100,8 +99,7 @@ class Popup extends Component {
     }
     
     return (
-      <React.Fragment>
-        {popup && <div className="mail-popup">
+      <div className="mail-popup">
           <div className="mail-popup-title">
             <h5>New Message</h5>
             <img src={Close} alt="close" onClick={this.popupClose} />
@@ -122,8 +120,7 @@ class Popup extends Component {
               <button type="submit" className="btn">Send</button>
             </form>
           </div>
-        </div>}
-      </React.Fragment>
+        </div>
     )
   }
 }

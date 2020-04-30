@@ -20,11 +20,16 @@ class App extends Component {
         popup: false,
       }
       this.clickCompose = this.clickCompose.bind(this);
+      this.popupClose = this.popupClose.bind(this);
       this.mailClick = this.mailClick.bind(this);
     }
 
     clickCompose() {
-      this.setState({popup: !this.state.popup})
+      this.setState({popup: true})
+    }
+
+    popupClose() {
+      this.setState({popup: false})
     }
 
     mailClick(id) {
@@ -50,7 +55,7 @@ class App extends Component {
                   <Route exact path="/" component={() => <Main list={inBox} mailClick={this.mailClick} />} />
         		      <Route path="/sent" component={() => <Main list={sentBox} mailClick={this.mailClick} />} />
         		    </Switch>
-                {this.state.popup && <PopUp mailId={this.state.id} />}
+                {this.state.popup && <PopUp mailId={this.state.id} popupClose={this.popupClose} />}
             	</div>
             </div>
           </Router>
