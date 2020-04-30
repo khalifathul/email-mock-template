@@ -1,0 +1,28 @@
+.check {
+	border: 2px solid #d1d1d1;
+	width: 14px;
+	height: 14px;
+}
+
+.mailList img {
+	width: 20px;
+	margin: 0px 53px 0px 33px;
+}
+
+.mail-content {
+	padding-left: 88px;
+}
+
+.mailList > div {
+	border-bottom: 1px solid #ebebeb;
+	cursor: pointer;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 88px;
+	padding: 38px 23px 35px
+}
+
+.main {
+	position: relative;
+}

@@ -1,0 +1,92 @@
+
+.mail-popup {
+	background-color: #fff;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.mail-popup-title {
+	background-color: #5390f4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	padding: 0px 40px;
+}
+
+.mail-popup-title img {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+
+.mail-popup-title h5 {
+	color: #fff;
+}
+
+.mail-popup-header {
+	border-bottom: 1px solid #ebebeb;
+	display: flex;
+	align-items: center;
+	height: 80px;
+	padding: 0px 40px;
+	position: relative;
+}
+
+.mail-popup-header img {
+	cursor: pointer;
+	width: 16px;
+	margin-top: -5px;
+}
+
+.mail-popup-header h6 {
+	cursor: pointer;
+}
+
+.mail-popup-header ul {
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px 0px;
+	position: absolute;
+	top: 50px;
+	min-width: 150px;
+}
+
+.mail-popup-header li {
+	cursor: pointer;
+	padding: 10px 15px;
+}
+
+.chat-history, .reply-box {
+	padding: 10px 50px;
+}
+
+.chat-history {
+	max-height: 160px;
+	overflow: auto;
+}
+
+.reply-box {
+	text-align: right;
+}
+
+.reply-box button {
+	background-color: #5390f4;
+	color: #fff;
+	font-weight: bold;
+	width: 110px;
+	height: 40px;
+	text-transform: uppercase;
+}
+
+.reply-box textarea {
+	border: 1px solid #ebebeb;
+	width: 100%;
+	height: 150px;
+	padding: 10px 20px;
+}
